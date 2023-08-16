@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
-import { pairHashpack, authenticateUser } from './hashconnect';
+//import { pairHashpack, authenticateUser } from './hashconnect';
 
 import styles from "./app.module.css";
 
@@ -80,7 +80,7 @@ const App = () => {
   
 
 
-  useEffect(() => {
+  /*useEffect(() => {
     addEventListener("PairWallet", handleGameOver);
     
     return () => {
@@ -89,7 +89,7 @@ const App = () => {
           
       
     };
-  }, [handleGameOver, addEventListener, removeEventListener]);
+  }, [handleGameOver, addEventListener, removeEventListener]);*/
 
   return (
     <div className={styles.container}>
@@ -112,10 +112,7 @@ const App = () => {
         
         <button onClick={handleClickFullscreen}>Fullscreen</button>
         
-        <button onClick={async () => {
-          const saveData = await pairHashpack()
-          setPairingString(saveData.pairingString)
-        }}>Pair wallet</button>
+       
 
 
       </div>
